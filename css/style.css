@@ -9,8 +9,22 @@ html, body {
 html[lang="fa"] #docs,
 html[lang="fa"] #instructions,
 html[lang="fa"] #credits .translate,
-a[href="#fa"] {
+a[href="#fa"],
+html[lang="he"] #docs,
+html[lang="he"] #instructions,
+html[lang="he"] #credits .translate,
+a[href="#he"],
+html[lang="ar"] #docs,
+html[lang="ar"] #instructions,
+html[lang="ar"] #credits .translate,
+a[href="#ar"] {
   direction: rtl;
+}
+
+html[lang="fa"] #docs,
+html[lang="fa"] #instructions,
+html[lang="fa"] #credits .translate,
+a[href="#fa"] {
   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 
@@ -79,7 +93,7 @@ a:hover {
 .tooltip {
   position: absolute;
   display: inline-block;
-  max-width: 225px;
+  max-width: 350px;
   padding: 1em 1em;
   background-color: #2c3e50;
   border-radius: 4px;
@@ -366,6 +380,11 @@ button:not(.disabled):hover {
   position: absolute;
   right: 1em;
   bottom: 1em;
+  padding-top: 0.3em;
+}
+
+.animation {
+  animation: tada 1s, pulse 2s infinite 2s;
 }
 
 #next.disabled {
@@ -424,11 +443,14 @@ button:not(.disabled):hover {
 }
 
 #board {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 50vw;
   height: 50vw;
   min-width: 300px;
   min-height: 300px;
+  max-width: 100vh;
+  max-height: 100vh;
   overflow: hidden;
 }
 
